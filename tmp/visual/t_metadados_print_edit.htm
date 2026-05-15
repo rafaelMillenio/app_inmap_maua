@@ -1,0 +1,216 @@
+<!doctype html>
+<html  {$html_attrs}>
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+      {$pagetitle}
+    </title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <base href="{$projectPath}">
+    <link REL="stylesheet" href="styles/default.css?{$wizardBuildKey}" type="text/css">
+    {BEGIN rtlCSS}
+      <link REL="stylesheet" href="styles/defaultRTL.css?{$wizardBuildKey}" type="text/css">
+    {END rtlCSS}
+    {BEGIN styleCSSFiles}
+      <link REL="stylesheet" href="{$stylepath}" type="text/css">
+    {END styleCSSFiles}
+  </head>
+  <BODY class="{$stylename} function-edit">
+    {BEGIN body}
+      {$header}
+      <style>
+        {$containerCss}
+      </style>
+      {$locking}
+      <DIV class="r-small-page" data-body-align="center" data-body-width="standard">
+        {BEGIN top_block}
+          <DIV class="r-form" data-location="top" id="form_top_{$pageid}" data-makeup="small" {$form_top} data-pageid="{$pageid}" data-v-width="4" data-v-margin="1">
+            <DIV class="row">
+              <DIV data-cellId="top_c1" data-pageid="{$pageid}" {$cell_top_c1} class="r-ori-vert col-md-12">
+                <h2 data-itemtype="edit_header" data-itemid="edit_header" {$item_edit_header} data-pageid="{$pageid}" >
+                  {$pagetitlelabel app_t_metadados_print edit}
+                </h2>
+              </div>
+            </div>
+          </div>
+        {END top_block}
+        {BEGIN above-grid_block}
+          <DIV class="r-form" data-location="above-grid" id="form_above-grid_{$pageid}" data-makeup="small" {$form_above-grid} data-pageid="{$pageid}" data-v-width="4" data-v-margin="1">
+            <DIV class="row">
+              <DIV data-cellId="above-grid_c1" data-pageid="{$pageid}" {$cell_above-grid_c1} class="r-ori-vert col-md-12">
+                <DIV data-itemtype="edit_message" data-itemid="edit_message" {$item_edit_message} data-pageid="{$pageid}" class="alert {$message_class}" role="alert">
+                  <h5>
+                    {$message}
+                  </h5>
+                </div>
+              </div>
+            </div>
+          </div>
+        {END above-grid_block}
+        {BEGIN grid_block}
+          <TABLE data-body-align="center" data-location="grid" id="form_grid_{$pageid}" data-makeup="small" {$form_grid} data-pageid="{$pageid}" class="r-edit-form" cellpadding="0" cellspacing="0" {$grid_hiddenattr} data-form-width="1" data-v-width="4">
+            <tbody>
+              <tr {$row_grid_0} >
+                {BEGIN cellblock_grid_c3}
+                  <TD {$cell_grid_c3} class="r-ori-vert" data-fullwidth data-cellId="grid_c3" data-pageid="{$pageid}" data-v-cell="4">
+                    <DIV edit-form-cell class="clearfix">
+                      {BEGIN titulo_fieldblock}
+                        <DIV class="r-integrated-field form-group clearfix {$fielddispclass_titulo} r-vertical-field" data-signal-error-for="titulo{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field" {$item_integrated_edit_field} data-pageid="{$pageid}" data-page="t_metadados_print_edit" data-field="titulo" data-fieldname="titulo">
+                          <LABEL class="r-edit-label control-label" for="{$labelfor_titulo}">
+                            {BEGIN titulo_label}
+                              {$label app_t_metadados_print titulo}
+                            {END titulo_label}
+                          </label>
+                          <DIV class="r-edit-field">
+                            {$titulo_editcontrol}
+                          </div>
+                          <DIV class="r-edit-tooltip" data-helpfor="titulo">
+                            <DIV class="text-muted">
+                              {$tooltip app_t_metadados_print titulo}
+                            </div>
+                          </div>
+                        </div>
+                      {END titulo_fieldblock}
+                      {BEGIN descricao_fieldblock}
+                        <DIV class="r-integrated-field form-group clearfix {$fielddispclass_descricao} r-vertical-field" data-signal-error-for="descricao{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field1" {$item_integrated_edit_field1} data-pageid="{$pageid}" data-page="t_metadados_print_edit" data-field="descricao" data-fieldname="descricao">
+                          <LABEL class="r-edit-label control-label" for="{$labelfor_descricao}">
+                            {BEGIN descricao_label}
+                              {$label app_t_metadados_print descricao}
+                            {END descricao_label}
+                          </label>
+                          <DIV class="r-edit-field">
+                            {$descricao_editcontrol}
+                          </div>
+                          <DIV class="r-edit-tooltip" data-helpfor="descricao">
+                            <DIV class="text-muted">
+                              {$tooltip app_t_metadados_print descricao}
+                            </div>
+                          </div>
+                        </div>
+                      {END descricao_fieldblock}
+                      {BEGIN cliente_fieldblock}
+                        <DIV class="r-integrated-field form-group clearfix {$fielddispclass_cliente} r-vertical-field" data-signal-error-for="cliente{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field2" {$item_integrated_edit_field2} data-pageid="{$pageid}" data-page="t_metadados_print_edit" data-field="cliente" data-fieldname="cliente">
+                          <LABEL class="r-edit-label control-label" for="{$labelfor_cliente}">
+                            {BEGIN cliente_label}
+                              {$label app_t_metadados_print cliente}
+                            {END cliente_label}
+                          </label>
+                          <DIV class="r-edit-field">
+                            {$cliente_editcontrol}
+                          </div>
+                          <DIV class="r-edit-tooltip" data-helpfor="cliente">
+                            <DIV class="text-muted">
+                              {$tooltip app_t_metadados_print cliente}
+                            </div>
+                          </div>
+                        </div>
+                      {END cliente_fieldblock}
+                      {BEGIN departamento_fieldblock}
+                        <DIV class="r-integrated-field form-group clearfix {$fielddispclass_departamento} r-vertical-field" data-signal-error-for="departamento{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field3" {$item_integrated_edit_field3} data-pageid="{$pageid}" data-page="t_metadados_print_edit" data-field="departamento" data-fieldname="departamento">
+                          <LABEL class="r-edit-label control-label" for="{$labelfor_departamento}">
+                            {BEGIN departamento_label}
+                              {$label app_t_metadados_print departamento}
+                            {END departamento_label}
+                          </label>
+                          <DIV class="r-edit-field">
+                            {$departamento_editcontrol}
+                          </div>
+                          <DIV class="r-edit-tooltip" data-helpfor="departamento">
+                            <DIV class="text-muted">
+                              {$tooltip app_t_metadados_print departamento}
+                            </div>
+                          </div>
+                        </div>
+                      {END departamento_fieldblock}
+                      {BEGIN imagem_fieldblock}
+                        <DIV class="r-integrated-field form-group clearfix {$fielddispclass_imagem} r-vertical-field" data-signal-error-for="imagem{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field8" {$item_integrated_edit_field8} data-pageid="{$pageid}" data-field="imagem" data-fieldname="imagem">
+                          <LABEL class="r-edit-label control-label" for="{$labelfor_imagem}">
+                            {BEGIN imagem_label}
+                              {$label app_t_metadados_print imagem}
+                            {END imagem_label}
+                          </label>
+                          <DIV class="r-edit-field">
+                            {$imagem_editcontrol}
+                          </div>
+                          <DIV class="r-edit-tooltip" data-helpfor="imagem">
+                            <DIV class="text-muted">
+                              {$tooltip app_t_metadados_print imagem}
+                            </div>
+                          </div>
+                        </div>
+                      {END imagem_fieldblock}
+                      {BEGIN rc_1_fieldblock}
+                        <DIV class="r-integrated-field form-group clearfix {$fielddispclass_rc_1} r-vertical-field" data-signal-error-for="rc_1{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field5" {$item_integrated_edit_field5} data-pageid="{$pageid}" data-page="t_metadados_print_edit" data-field="rc_1" data-fieldname="rc_1">
+                          <LABEL class="r-edit-label control-label" for="{$labelfor_rc_1}">
+                            {BEGIN rc_1_label}
+                              {$label app_t_metadados_print rc_1}
+                            {END rc_1_label}
+                          </label>
+                          <DIV class="r-edit-field">
+                            {$rc_1_editcontrol}
+                          </div>
+                          <DIV class="r-edit-tooltip" data-helpfor="rc_1">
+                            <DIV class="text-muted">
+                              {$tooltip app_t_metadados_print rc_1}
+                            </div>
+                          </div>
+                        </div>
+                      {END rc_1_fieldblock}
+                      {BEGIN rc_2_fieldblock}
+                        <DIV class="r-integrated-field form-group clearfix {$fielddispclass_rc_2} r-vertical-field" data-signal-error-for="rc_2{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field6" {$item_integrated_edit_field6} data-pageid="{$pageid}" data-page="t_metadados_print_edit" data-field="rc_2" data-fieldname="rc_2">
+                          <LABEL class="r-edit-label control-label" for="{$labelfor_rc_2}">
+                            {BEGIN rc_2_label}
+                              {$label app_t_metadados_print rc_2}
+                            {END rc_2_label}
+                          </label>
+                          <DIV class="r-edit-field">
+                            {$rc_2_editcontrol}
+                          </div>
+                          <DIV class="r-edit-tooltip" data-helpfor="rc_2">
+                            <DIV class="text-muted">
+                              {$tooltip app_t_metadados_print rc_2}
+                            </div>
+                          </div>
+                        </div>
+                      {END rc_2_fieldblock}
+                  </td>
+                {END cellblock_grid_c3}
+              </tr>
+            </tbody>
+          </table>
+        {END grid_block}
+        {BEGIN below-grid_block}
+          <DIV class="r-form" data-location="below-grid" id="form_below-grid_{$pageid}" data-makeup="small" {$form_below-grid} data-pageid="{$pageid}" data-v-width="4" data-v-margin="1">
+            <DIV class="row">
+              <DIV data-cellId="below-grid_c1" data-pageid="{$pageid}" {$cell_below-grid_c1} class="col-md-6">
+                {BEGIN save_edit}
+                  <span data-itemtype="edit_save" data-itemid="edit_save" {$item_edit_save} data-pageid="{$pageid}" data-small data-button-item>
+                    <A type="button" title class="btn btn-primary" {$savebutton_attrs}>
+                      Salvar
+                    </a>
+                  </span>
+                {END save_edit}
+                {BEGIN close_button}
+                  <span data-itemtype="edit_close" data-itemid="edit_close" {$item_edit_close} data-pageid="{$pageid}" data-small data-button-item>
+                    <A type="button" title class="btn btn-default" {$closebutton_attrs}>
+                      Cancelar
+                    </a>
+                  </span>
+                {END close_button}
+              </div>
+              <DIV data-cellId="below-grid_c2" data-pageid="{$pageid}" {$cell_below-grid_c2} class="r-align-right r-ori-vert col-md-6">
+                <span data-itemtype="edit_reset" data-itemid="edit_reset" {$item_edit_reset} data-pageid="{$pageid}" data-small data-button-item>
+                  <A type="button" title class="btn btn-default" {$resetbutton_attrs}>
+                    Limpar
+                  </a>
+                </span>
+              </div>
+            </div>
+          </div>
+        {END below-grid_block}
+      </div>
+      {$footer}
+    {END body}
+  </body>
+</html>

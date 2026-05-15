@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html {$html_attrs}>
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{$pagetitle}</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <base href="{$projectPath}" />
+    <link rel="stylesheet" href="styles/default.css?{$wizardBuildKey}" type="text/css" />
+    {BEGIN rtlCSS}
+    <link rel="stylesheet" href="styles/defaultRTL.css?{$wizardBuildKey}" type="text/css" />
+    {END rtlCSS} {BEGIN styleCSSFiles}
+    <link rel="stylesheet" href="{$stylepath}" type="text/css" />
+    {END styleCSSFiles}
+  </head>
+  <body class="{$stylename} function-menu">
+    {BEGIN body} {$header}
+    <style>
+      {$containerCss}
+    </style>
+    <div class="r-topbar-page">
+      <div data-menu-width="full" class="r-topheader" data-resize-name="topbar" data-body-align="center">
+        {BEGIN supertop_block}
+        <nav class="navbar navbar-default" data-location="supertop" id="form_supertop_{$pageid}" data-makeup="topbar" {$form_supertop} data-pageid="{$pageid}">
+          <span class="navbar-form r-align-left r-ori-vert navbar-header" data-cellId="supertop_c1" data-pageid="{$pageid}" data-itemid="text" {$item_text} data-topcell-item-type="text">
+            <span data-itemtype="text" data-itemid="text" {$item_text} data-pageid="{$pageid}" data-small> Prefeitura de Osasco - SIGO</span>
+          </span>
+
+          <span class="navbar-form r-align-right navbar-collapse" data-cellId="supertop_c2" data-pageid="{$pageid}" data-itemid="loginform_login" {$item_loginform_login} data-topcell-item-type="loginform_login">
+            {BEGIN guestloginbutton}
+            <span data-itemtype="loginform_login" data-itemid="loginform_login" {$item_loginform_login} data-pageid="{$pageid}" data-small data-button-item>
+              <a type="button" title="" class="btn btn-primary" href="#" {$guestloginlink_attrs}> Login </a>
+            </span>
+            {END guestloginbutton}
+          </span>
+
+          <span class="navbar-form r-align-right navbar-collapse" data-cellId="supertop_c2" data-pageid="{$pageid}" data-itemid="username_button" {$item_username_button} data-topcell-item-type="username_button">
+            {BEGIN loggedas_message}
+            <span data-itemtype="username_button" data-itemid="username_button" {$item_username_button} data-pageid="{$pageid}" data-small data-button-item>
+              <span class="dropdown">
+                <button type="button" title="" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  {BEGIN userbutton_icon} <span class="glyphicon glyphicon-user"></span> {END userbutton_icon}{$userbutton_image} {$username} <span class="caret"></span>
+                </button>
+                <ul class="dropdown-menu">
+                  <li data-itemtype="custom_button" data-itemid="custom_button" {$item_custom_button} data-pageid="{$pageid}" data-small>
+                    <a id="New_Button" href="javascript:void(0)" typeid="ib" title="">
+                      Usuário
+                    </a>
+                  </li>
+                  {BEGIN logoutbutton}
+                  <li data-itemtype="logout_link" data-itemid="logout_link" {$item_logout_link} data-pageid="{$pageid}" data-small>
+                    <a href="#" {$logoutlink_attrs} title="">
+                      Sair
+                    </a>
+                  </li>
+                  {END logoutbutton}
+                </ul>
+              </span>
+            </span>
+            {END loggedas_message}
+          </span>
+        </nav>
+        {END supertop_block} {$locking}
+      </div>
+      <div data-body-align="center" data-body-width="standard" class="r-body" data-resize-top="topbar">
+        <div class="r-top"></div>
+        <div class="r-content">
+          <div class="r-data-block" data-body-width="standard">
+            <div class="r-above">
+              {BEGIN above-grid_block}
+              <div class="r-form" data-location="above-grid" id="form_above-grid_{$pageid}" data-makeup="topbar" {$form_above-grid} data-pageid="{$pageid}">
+                <div class="row">
+                  <div data-cellId="above-grid_c1" data-pageid="{$pageid}" {$cell_above-grid_c1} class="r-ori-vert col-md-12">
+                    {BEGIN firstAboveGridCell} {END firstAboveGridCell}
+                  </div>
+                </div>
+              </div>
+              {END above-grid_block}
+            </div>
+            <div class="r-grid">
+              {BEGIN grid_tabs}
+              <ul class="nav nav-tabs bsgrid_tabs">
+                {$grid_tabs_content}
+              </ul>
+              {END grid_tabs} {BEGIN grid_block}
+              <table class="r-fluid r-form" data-location="grid" id="form_grid_{$pageid}" data-makeup="topbar" {$form_grid} data-pageid="{$pageid}">
+                <tbody>
+                  <tr {$row_grid_0}>
+                    <td data-cellId="grid_c6" data-pageid="{$pageid}">
+                      <div class="r-welcome-align-right">
+                        {BEGIN changepwd_link}
+                        <span data-itemtype="changepassword_link" data-itemid="changepassword_link" {$item_changepassword_link} data-pageid="{$pageid}" data-small data-button-item>
+                          <a type="button" title="" class="btn btn-default" href="changepwd.php" {$changepwdlink_attrs} id="changePasswordButton{$id}"> Alterar senha </a>
+                        </span>
+                        {END changepwd_link}
+                      </div>
+                    </td>
+                  </tr>
+                  <tr {$row_grid_1}>
+                    <td data-cellId="grid_c7" data-pageid="{$pageid}">
+                      <div class="r-welcome-align">
+                        <span data-itemtype="text" data-itemid="text1" {$item_text1} data-pageid="{$pageid}" data-small style="width: 100%"> <iframe src="http://localhost/osasco/metadados/tbl_metadados_list.php?page=list" height="550" width="100%" title="Iframe Example"></iframe></span>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr {$row_grid_2}>
+                    <td data-cellId="grid_c1" data-pageid="{$pageid}" data-page="_global_menu1">
+                      <div class="r-welcome-align">
+                        <div class="clearfix col-lg-12 col-md-12 col-sm-12 welcome-group" data-itemtype="welcome_group" data-itemid="welcome_group" {$item_welcome_group} data-pageid="{$pageid}">
+                          <h2>
+                            Aplicações
+                          </h2>
+                        </div>
+
+                        <div class="bs-welcome-item" data-itemtype="welcome_item" data-itemid="welcome_item1" {$item_welcome_item1} data-pageid="{$pageid}" data-page="_global_menu1" data-comment-len="0">
+                          <div class="bs-welcome-header">
+                            <a id="itemlink" href="../web" target="&#34;_blank&#34;"> <span class="fa fa-globe"></span>SIGO </a>
+                          </div>
+
+                          <div class="bs-welcome-content"></div>
+                        </div>
+
+                        <div class="bs-welcome-item" data-itemtype="welcome_item" data-itemid="welcome_item3" {$item_welcome_item3} data-pageid="{$pageid}" data-page="_global_menu1" data-comment-len="0">
+                          <div class="bs-welcome-header">
+                            <a id="itemlink" href="t_cius_consulta_list.php" target="&#34;_blank&#34;"> <span class="glyphicon glyphicon-object-align-top"></span>CIUS-interno </a>
+                          </div>
+
+                          <div class="bs-welcome-content"></div>
+                        </div>
+
+                        <div class="bs-welcome-item" data-itemtype="welcome_item" data-itemid="welcome_item18" {$item_welcome_item18} data-pageid="{$pageid}" data-page="_global_menu1" data-comment-len="0">
+                          <div class="bs-welcome-header">
+                            <a id="itemlink" href="cius_list.php" target="&#34;_blank&#34;"> <span class="glyphicon glyphicon-object-align-top"></span>CIUS-externo </a>
+                          </div>
+
+                          <div class="bs-welcome-content"></div>
+                        </div>
+
+                        <div class="bs-welcome-item" data-itemtype="welcome_item" data-itemid="welcome_item4" {$item_welcome_item4} data-pageid="{$pageid}" data-page="_global_menu1" data-comment-len="0">
+                          <div class="bs-welcome-header">
+                            <a id="itemlink" href="t_memo_registro_list.php" target="&#34;_blank&#34;"> <span class="fa fa-object-ungroup"></span>Memorial </a>
+                          </div>
+
+                          <div class="bs-welcome-content"></div>
+                        </div>
+
+                        <div class="clearfix"></div>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr {$row_grid_3}>
+                    <td data-cellId="grid_c" data-pageid="{$pageid}">
+                      <div class="r-welcome-align">
+                        <div class="clearfix col-lg-12 col-md-12 col-sm-12 welcome-group" data-itemtype="welcome_group" data-itemid="welcome_group1" {$item_welcome_group1} data-pageid="{$pageid}">
+                          <h2>
+                            Cadastros
+                          </h2>
+                        </div>
+
+                        <div class="bs-welcome-item" data-itemtype="welcome_item" data-itemid="welcome_item2" {$item_welcome_item2} data-pageid="{$pageid}" data-page="_global_menu1" data-comment-len="0">
+                          <div class="bs-welcome-header">
+                            <a id="itemlink" href="t_imobiliario_default_list.php" target="&#34;_blank&#34;"> <span class="fa fa-wpforms"></span>Imobiliario </a>
+                          </div>
+
+                          <div class="bs-welcome-content"></div>
+                        </div>
+
+                        <div class="bs-welcome-item" data-itemtype="welcome_item" data-itemid="welcome_item13" {$item_welcome_item13} data-pageid="{$pageid}" data-page="_global_menu1" data-comment-len="0">
+                          <div class="bs-welcome-header">
+                            <a id="itemlink" href="t_imobiliario_recad_list.php" target="&#34;_blank&#34;"> <span class="fa fa-wpforms"></span>Recad. Imobiliario </a>
+                          </div>
+
+                          <div class="bs-welcome-content"></div>
+                        </div>
+
+                        <div class="bs-welcome-item" data-itemtype="welcome_item" data-itemid="welcome_item5" {$item_welcome_item5} data-pageid="{$pageid}" data-page="_global_menu1" data-comment-len="0">
+                          <div class="bs-welcome-header">
+                            <a id="itemlink" href="t_mobiliario_empresa_list.php" target="&#34;_blank&#34;"> <span class="fa fa-columns"></span>Mobiliario </a>
+                          </div>
+
+                          <div class="bs-welcome-content"></div>
+                        </div>
+
+                        <div class="bs-welcome-item" data-itemtype="welcome_item" data-itemid="welcome_item7" {$item_welcome_item7} data-pageid="{$pageid}" data-page="_global_menu1" data-comment-len="0">
+                          <div class="bs-welcome-header">
+                            <a id="itemlink" href="t_renum_logradouros_list.php" target="&#34;_blank&#34;"> <span class="glyphicon glyphicon-sound-7-1"></span>Renumeração </a>
+                          </div>
+
+                          <div class="bs-welcome-content"></div>
+                        </div>
+
+                        <div class="bs-welcome-item" data-itemtype="welcome_item" data-itemid="welcome_item9" {$item_welcome_item9} data-pageid="{$pageid}" data-page="_global_menu1" data-comment-len="0">
+                          <div class="bs-welcome-header">
+                            <a id="itemlink" href="t_logradouros_list.php" target="&#34;_blank&#34;"> <span class="fa fa-map-signs"></span>Logradouros </a>
+                          </div>
+
+                          <div class="bs-welcome-content"></div>
+                        </div>
+
+                        <div class="bs-welcome-item" data-itemtype="welcome_item" data-itemid="welcome_item12" {$item_welcome_item12} data-pageid="{$pageid}" data-page="_global_menu1" data-comment-len="0">
+                          <div class="bs-welcome-header">
+                            <a id="itemlink" href="t_face_quadra_list.php" target="&#34;_blank&#34;"> <span class="fa fa-object-group"></span>Face de Quadra </a>
+                          </div>
+
+                          <div class="bs-welcome-content"></div>
+                        </div>
+
+                        <div class="bs-welcome-item" data-itemtype="welcome_item" data-itemid="welcome_item14" {$item_welcome_item14} data-pageid="{$pageid}" data-page="_global_menu1" data-comment-len="0">
+                          <div class="bs-welcome-header">
+                            <a id="itemlink" href="t_estim_area_const_list.php" target="&#34;_blank&#34;"> <span class="fa fa-superscript"></span>Estim. área const. </a>
+                          </div>
+
+                          <div class="bs-welcome-content"></div>
+                        </div>
+
+                        <div class="bs-welcome-item" data-itemtype="welcome_item" data-itemid="welcome_item15" {$item_welcome_item15} data-pageid="{$pageid}" data-page="_global_menu1" data-comment-len="0">
+                          <div class="bs-welcome-header">
+                            <a id="itemlink" href="t_estim_area_const_vistoria_list.php" target="&#34;_blank&#34;"> <span class="fa fa-check"></span>Vistorias </a>
+                          </div>
+
+                          <div class="bs-welcome-content"></div>
+                        </div>
+
+                        <div class="bs-welcome-item" data-itemtype="welcome_item" data-itemid="welcome_item32" {$item_welcome_item32} data-pageid="{$pageid}" data-page="_global_menu1" data-comment-len="0">
+                          <div class="bs-welcome-header">
+                            <a id="itemlink" href="geo_loteamento_list.php" target="&#34;_blank&#34;"> <span class="fa fa-file-image-o"></span>Loteamentos </a>
+                          </div>
+                        </div>
+
+                        <div class="bs-welcome-item" data-itemtype="welcome_item" data-itemid="welcome_item33" {$item_welcome_item33} data-pageid="{$pageid}" data-page="_global_menu1" data-comment-len="0">
+                          <div class="bs-welcome-header">
+                            <a id="itemlink" href="geo_decreto_lei_list.php" target="&#34;_blank&#34;"> <span class="fa fa-list-alt"></span>Decreto/Lei </a>
+                          </div>
+                        </div>
+
+                        <div class="clearfix"></div>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr {$row_grid_4}>
+                    <td data-cellId="grid_c2" data-pageid="{$pageid}">
+                      <div class="r-welcome-align">
+                        <div class="clearfix col-lg-12 col-md-12 col-sm-12 welcome-group" data-itemtype="welcome_group" data-itemid="welcome_group2" {$item_welcome_group2} data-pageid="{$pageid}">
+                          <h2>
+                            Anexos
+                          </h2>
+                        </div>
+
+                        <div class="bs-welcome-item" data-itemtype="welcome_item" data-itemid="welcome_item24" {$item_welcome_item24} data-pageid="{$pageid}" data-page="_global_menu1" data-comment-len="0">
+                          <div class="bs-welcome-header">
+                            <a id="itemlink" href="t_arquivos_matricula_list.php" target="&#34;_blank&#34;"> <span class="glyphicon glyphicon-ok"></span>Matrículas </a>
+                          </div>
+
+                          <div class="bs-welcome-content"></div>
+                        </div>
+
+                        <div class="bs-welcome-item" data-itemtype="welcome_item" data-itemid="welcome_item17" {$item_welcome_item17} data-pageid="{$pageid}" data-page="_global_menu1" data-comment-len="0">
+                          <div class="bs-welcome-header">
+                            <a id="itemlink" href="t_arquivos_alvara_list.php" target="&#34;_blank&#34;"> <span class="fa fa-check"></span>Alvarás </a>
+                          </div>
+
+                          <div class="bs-welcome-content"></div>
+                        </div>
+
+                        <div class="bs-welcome-item" data-itemtype="welcome_item" data-itemid="welcome_item27" {$item_welcome_item27} data-pageid="{$pageid}" data-page="_global_menu1" data-comment-len="0">
+                          <div class="bs-welcome-header">
+                            <a id="itemlink" href="t_arquivos_foto_list.php" target="&#34;_blank&#34;"> <span class="fa fa-picture-o"></span>Fotos </a>
+                          </div>
+
+                          <div class="bs-welcome-content"></div>
+                        </div>
+
+                        <div class="bs-welcome-item" data-itemtype="welcome_item" data-itemid="welcome_item26" {$item_welcome_item26} data-pageid="{$pageid}" data-page="_global_menu1" data-comment-len="0">
+                          <div class="bs-welcome-header">
+                            <a id="itemlink" href="t_arquivos_croqui_list.php" target="&#34;_blank&#34;"> <span class="glyphicon glyphicon-object-align-top"></span>Croquis </a>
+                          </div>
+
+                          <div class="bs-welcome-content"></div>
+                        </div>
+
+                        <div class="bs-welcome-item" data-itemtype="welcome_item" data-itemid="welcome_item25" {$item_welcome_item25} data-pageid="{$pageid}" data-page="_global_menu1" data-comment-len="0">
+                          <div class="bs-welcome-header">
+                            <a id="itemlink" href="t_arquivos_outros_list.php" target="&#34;_blank&#34;"> <span class="glyphicon glyphicon-link"></span>Outros </a>
+                          </div>
+
+                          <div class="bs-welcome-content"></div>
+                        </div>
+
+                        <div class="clearfix"></div>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr {$row_grid_5}>
+                    <td data-cellId="grid_c3" data-pageid="{$pageid}">
+                      <div class="r-welcome-align">
+                        <div class="clearfix col-lg-12 col-md-12 col-sm-12 welcome-group" data-itemtype="welcome_group" data-itemid="welcome_group4" {$item_welcome_group4} data-pageid="{$pageid}">
+                          <h2>
+                            Serviços
+                          </h2>
+                        </div>
+
+                        <div class="bs-welcome-item" data-itemtype="welcome_item" data-itemid="welcome_item30" {$item_welcome_item30} data-pageid="{$pageid}" data-page="_global_menu1" data-comment-len="0">
+                          <div class="bs-welcome-header">
+                            <a id="itemlink" href="forum_list.php" target="&#34;_blank&#34;"> <span class="fa fa-map"></span>TileServer </a>
+                          </div>
+                        </div>
+
+                        <div class="bs-welcome-item" data-itemtype="welcome_item" data-itemid="welcome_item" {$item_welcome_item} data-pageid="{$pageid}" data-page="_global_menu1" data-comment-len="0">
+                          <div class="bs-welcome-header">
+                            <a id="itemlink" href="cloud_list.php" target="&#34;_blank&#34;"> <span class="glyphicon glyphicon-cloud"></span>Cloud </a>
+                          </div>
+                        </div>
+
+                        <div class="bs-welcome-item" data-itemtype="welcome_item" data-itemid="welcome_item10" {$item_welcome_item10} data-pageid="{$pageid}" data-page="_global_menu1" data-comment-len="0">
+                          <div class="bs-welcome-header">
+                            <a id="itemlink" href="public_learn_list.php" target="&#34;_blank&#34;"> <span class="glyphicon glyphicon-pencil"></span>Manual </a>
+                          </div>
+                        </div>
+
+                        <div class="bs-welcome-item" data-itemtype="welcome_item" data-itemid="welcome_item28" {$item_welcome_item28} data-pageid="{$pageid}" data-page="_global_menu1" data-comment-len="0">
+                          <div class="bs-welcome-header">
+                            <a id="itemlink" href="t_sistema_demanda_list.php" target="&#34;_blank&#34;"> <span class="glyphicon glyphicon-asterisk"></span>Atividades </a>
+                          </div>
+                        </div>
+
+                        <div class="clearfix"></div>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr {$row_grid_6}>
+                    <td data-cellId="grid_c4" data-pageid="{$pageid}">
+                      <div class="r-welcome-align">
+                        <div class="clearfix col-lg-12 col-md-12 col-sm-12 welcome-group" data-itemtype="welcome_group" data-itemid="welcome_group3" {$item_welcome_group3} data-pageid="{$pageid}">
+                          <h2>
+                            Sistema
+                          </h2>
+                        </div>
+
+                        <div class="bs-welcome-item" data-itemtype="welcome_item" data-itemid="welcome_item16" {$item_welcome_item16} data-pageid="{$pageid}" data-page="_global_menu1" data-comment-len="0">
+                          <div class="bs-welcome-header">
+                            <a id="itemlink" href="admin_permissao_dashboard.php" target="&#34;_blank&#34;"> <span class="fa fa-group"></span>Permissões </a>
+                          </div>
+
+                          <div class="bs-welcome-content"></div>
+                        </div>
+
+                        <div class="bs-welcome-item" data-itemtype="welcome_item" data-itemid="welcome_item20" {$item_welcome_item20} data-pageid="{$pageid}" data-page="_global_menu1" data-comment-len="0">
+                          <div class="bs-welcome-header">
+                            <a id="itemlink" href="admin_camadas_dashboard.php" target="&#34;_blank&#34;"> <span class="fa fa-gears"></span>Configurações </a>
+                          </div>
+                        </div>
+
+                        <div class="bs-welcome-item" data-itemtype="welcome_item" data-itemid="welcome_item34" {$item_welcome_item34} data-pageid="{$pageid}" data-page="_global_menu1" data-comment-len="0">
+                          <div class="bs-welcome-header">
+                            <a id="itemlink" href="admin_cadastros_dashboard.php" target="&#34;_blank&#34;"> <span class="glyphicon glyphicon-th-list"></span>Cadastros </a>
+                          </div>
+                        </div>
+
+                        <div class="bs-welcome-item" data-itemtype="welcome_item" data-itemid="welcome_item23" {$item_welcome_item23} data-pageid="{$pageid}" data-page="_global_menu1" data-comment-len="0">
+                          <div class="bs-welcome-header">
+                            <a id="itemlink" href="geoserver_list.php" target="&#34;_blank&#34;"> <span class="glyphicon glyphicon-globe"></span>Geoserver </a>
+                          </div>
+                        </div>
+
+                        <div class="bs-welcome-item" data-itemtype="welcome_item" data-itemid="welcome_item31" {$item_welcome_item31} data-pageid="{$pageid}" data-page="_global_menu1" data-comment-len="0">
+                          <div class="bs-welcome-header">
+                            <a id="itemlink" href="diagnostico_list.php" target="&#34;_blank&#34;"> <span class="glyphicon glyphicon-eye-open"></span>Diagnostico </a>
+                          </div>
+                        </div>
+
+                        <div class="bs-welcome-item" data-itemtype="welcome_item" data-itemid="welcome_item11" {$item_welcome_item11} data-pageid="{$pageid}" data-page="_global_menu1" data-comment-len="0">
+                          <div class="bs-welcome-header">
+                            <a id="itemlink" href="pgadmin_list.php" target="&#34;_blank&#34;"> <img src="{$file_url images/menuicons/dbs_postgresql.png}" />Pgadmin </a>
+                          </div>
+                        </div>
+
+                        <div class="bs-welcome-item" data-itemtype="welcome_item" data-itemid="welcome_item6" {$item_welcome_item6} data-pageid="{$pageid}" data-page="_global_menu1" data-comment-len="0">
+                          <div class="bs-welcome-header">
+                            <a id="itemlink" href="portainer_list.php" target="&#34;_blank&#34;"> <span class="glyphicon glyphicon-tasks"></span>Portainer </a>
+                          </div>
+                        </div>
+
+                        <div class="bs-welcome-item" data-itemtype="welcome_item" data-itemid="welcome_item21" {$item_welcome_item21} data-pageid="{$pageid}" data-page="_global_menu1" data-comment-len="0">
+                          <div class="bs-welcome-header">
+                            <a id="itemlink" href="geostyler_list.php" target="&#34;_blank&#34;"> <span class="fa fa-adjust"></span>Geostyler </a>
+                          </div>
+                        </div>
+
+                        <div class="bs-welcome-item" data-itemtype="welcome_item" data-itemid="welcome_item29" {$item_welcome_item29} data-pageid="{$pageid}" data-page="_global_menu1" data-comment-len="0">
+                          <div class="bs-welcome-header">
+                            <a id="itemlink" href="pgrest_list.php" target="&#34;_blank&#34;"> <span class="glyphicon glyphicon-oil"></span>Pgrest </a>
+                          </div>
+                        </div>
+
+                        <div class="bs-welcome-item" data-itemtype="welcome_item" data-itemid="welcome_item8" {$item_welcome_item8} data-pageid="{$pageid}" data-page="_global_menu1" data-comment-len="0">
+                          <div class="bs-welcome-header">
+                            <a id="itemlink" href="core_list.php" target="&#34;_blank&#34;"> <span class="fa fa-snowflake-o"></span>Sistema </a>
+                          </div>
+                        </div>
+
+                        <div class="bs-welcome-item" data-itemtype="welcome_item" data-itemid="welcome_item19" {$item_welcome_item19} data-pageid="{$pageid}" data-page="_global_menu1" data-comment-len="0">
+                          <div class="bs-welcome-header">
+                            <a id="itemlink" href="interop_list.php" target="&#34;_blank&#34;"> <span class="fa fa-refresh"></span>Pentaho </a>
+                          </div>
+                        </div>
+
+                        <div class="bs-welcome-item" data-itemtype="welcome_item" data-itemid="welcome_item22" {$item_welcome_item22} data-pageid="{$pageid}" data-page="_global_menu1" data-comment-len="0">
+                          <div class="bs-welcome-header">
+                            <a id="itemlink" href="t_metadados_print_edit.php" target="&#34;_blank&#34;"> <span class="fa fa-print"></span>Config. Impressão </a>
+                          </div>
+                        </div>
+
+                        <div class="clearfix"></div>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr {$row_grid_7}>
+                    <td data-cellId="grid_c5" data-pageid="{$pageid}">
+                      <div class="r-welcome-align"></div>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+              {END grid_block}
+            </div>
+            <div class="r-below"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    {$footer} {END body}
+  </body>
+</html>

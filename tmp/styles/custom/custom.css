@@ -1,0 +1,7 @@
+::-ms-input-placeholder { /* Edge 12-18 */
+  text-align: center;
+}
+
+::placeholder {
+  text-align: center;
+}

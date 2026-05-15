@@ -1,0 +1,319 @@
+<!doctype html>
+<html  {$html_attrs}>
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+      {$pagetitle}
+    </title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <base href="{$projectPath}">
+    <link REL="stylesheet" href="styles/default.css?{$wizardBuildKey}" type="text/css">
+    {BEGIN rtlCSS}
+      <link REL="stylesheet" href="styles/defaultRTL.css?{$wizardBuildKey}" type="text/css">
+    {END rtlCSS}
+    {BEGIN styleCSSFiles}
+      <link REL="stylesheet" href="{$stylepath}" type="text/css">
+    {END styleCSSFiles}
+  </head>
+  <BODY class="{$stylename} function-print" {$bodyattrs}>
+    {BEGIN body}
+      {$header}
+      <style>
+        {$containerCss}
+      </style>
+      {$locking}
+      <DIV class="r-small-page" data-body-align="left" data-body-width="standard">
+        {BEGIN top_block}
+          <DIV class="r-form" data-location="top" id="form_top_{$pageid}" data-makeup="small" {$form_top} data-pageid="{$pageid}">
+            <DIV class="row">
+              <DIV data-cellId="top_c" data-pageid="{$pageid}" {$cell_top_c} class="r-ori-horiz col-md-12">
+                <img src="{$file_url images/osasco_brasao.png}" data-itemtype="image" data-itemid="image" {$item_image} data-pageid="{$pageid}" data-page="t_renum_planilha_print" />
+                <h2 data-itemtype="print_header" data-itemid="print_header" {$item_print_header} data-pageid="{$pageid}" data-page="t_renum_planilha_print" style="font-size: 20px;" >
+                  {$pagetitlelabel app_t_renum_planilha print}
+                </h2>
+              </div>
+            </div>
+          </div>
+        {END top_block}
+        {BEGIN above-grid_block}
+          <DIV class="r-form" data-location="above-grid" id="form_above-grid_{$pageid}" data-makeup="small" {$form_above-grid} data-pageid="{$pageid}">
+            <DIV class="row">
+              <DIV data-cellId="above-grid_c1" data-pageid="{$pageid}" {$cell_above-grid_c1} class="col-md-12">
+                {BEGIN firstAboveGridCell}
+
+                  <span data-itemtype="snippet" data-itemid="snippet" {$item_snippet} data-pageid="{$pageid}" style="font-size: 16px; font-weight: bold;">
+                    {$descricao_log}
+                  </span>
+									 </BR>
+                  <span data-itemtype="print_pages" data-itemid="print_pages" {$item_print_pages} data-pageid="{$pageid}" data-small >
+                    {$print_pages_labelprint_pages}
+                  </span>
+
+                {END firstAboveGridCell}
+              </div>
+            </div>
+          </div>
+        {END above-grid_block}
+        {BEGIN grid_block}
+          {BEGIN message_block}
+            <DIV data-grid-message data-pageid="{$pageid}" class="alert {$message_class}" role="alert" {$grid_message_attrs}>
+              {$message}
+            </div>
+          {END message_block}
+          <TABLE data-location="grid" id="form_grid_{$pageid}" data-makeup="small" {$form_grid} data-pageid="{$pageid}" class="table {$grid_classes} r-horizontal-grid rnr-b-grid rnr-gridtable" cellpadding="0" data-body-height="1">
+            <thead>
+              {BEGIN grid_header}
+                <TR {$rowattrs} {$row_grid_0} class="{$rowclass} {$gridHeader_class} r-gridrow">
+                  {BEGIN cellblock_grid_headcell_field}
+                    <TH {$cell_grid_headcell_field} {$recordattrs} class="r-ori-vert {$cod_log_geo_class}" data-field="cod_log_geo" data-cellId="grid_headcell_field" data-pageid="{$pageid}" data-record-id="{$recId}">
+                      {BEGIN cod_log_geo_fieldheadercolumn}
+                        <span data-itemtype="grid_field_label" data-itemid="simple_grid_field2" {$item_simple_grid_field2} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="cod_log_geo" data-fieldname="cod_log_geo">
+                          {$label app_t_renum_planilha cod_log_geo}
+                        </span>
+                      {END cod_log_geo_fieldheadercolumn}
+                    </th>
+                  {END cellblock_grid_headcell_field}
+                  {BEGIN cellblock_grid_headcell_field1}
+                    <TH {$cell_grid_headcell_field1} {$recordattrs} class="r-ori-vert {$inscricao_class}" data-field="inscricao" data-cellId="grid_headcell_field1" data-pageid="{$pageid}" data-record-id="{$recId}">
+                      {BEGIN inscricao_fieldheadercolumn}
+                        <span data-itemtype="grid_field_label" data-itemid="simple_grid_field5" {$item_simple_grid_field5} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="inscricao" data-fieldname="inscricao">
+                          {$label app_t_renum_planilha inscricao}
+                        </span>
+                      {END inscricao_fieldheadercolumn}
+                    </th>
+                  {END cellblock_grid_headcell_field1}
+                  {BEGIN cellblock_grid_headcell_field2}
+                    <TH {$cell_grid_headcell_field2} {$recordattrs} class="r-ori-vert {$num_minimo_class}" data-field="num_minimo" data-cellId="grid_headcell_field2" data-pageid="{$pageid}" data-record-id="{$recId}">
+                      {BEGIN num_minimo_fieldheadercolumn}
+                        <span data-itemtype="grid_field_label" data-itemid="simple_grid_field13" {$item_simple_grid_field13} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="num_minimo" data-fieldname="num_minimo">
+                          {$label app_t_renum_planilha num_minimo}
+                        </span>
+                      {END num_minimo_fieldheadercolumn}
+                    </th>
+                  {END cellblock_grid_headcell_field2}
+                  {BEGIN cellblock_grid_headcell_field3}
+                    <TH {$cell_grid_headcell_field3} {$recordattrs} class="r-ori-vert {$num_medio_class}" data-field="num_medio" data-cellId="grid_headcell_field3" data-pageid="{$pageid}" data-record-id="{$recId}">
+                      {BEGIN num_medio_fieldheadercolumn}
+                        <span data-itemtype="grid_field_label" data-itemid="simple_grid_field14" {$item_simple_grid_field14} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="num_medio" data-fieldname="num_medio">
+                          {$label app_t_renum_planilha num_medio}
+                        </span>
+                      {END num_medio_fieldheadercolumn}
+                    </th>
+                  {END cellblock_grid_headcell_field3}
+                  {BEGIN cellblock_grid_headcell_field4}
+                    <TH {$cell_grid_headcell_field4} {$recordattrs} class="r-ori-vert {$num_maximo_class}" data-field="num_maximo" data-cellId="grid_headcell_field4" data-pageid="{$pageid}" data-record-id="{$recId}">
+                      {BEGIN num_maximo_fieldheadercolumn}
+                        <span data-itemtype="grid_field_label" data-itemid="simple_grid_field16" {$item_simple_grid_field16} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="num_maximo" data-fieldname="num_maximo">
+                          {$label app_t_renum_planilha num_maximo}
+                        </span>
+                      {END num_maximo_fieldheadercolumn}
+                    </th>
+                  {END cellblock_grid_headcell_field4}
+                  {BEGIN cellblock_grid_headcell_field5}
+                    <TH {$cell_grid_headcell_field5} {$recordattrs} class="r-ori-vert {$num_cad_class}" data-field="num_cad" data-cellId="grid_headcell_field5" data-pageid="{$pageid}" data-record-id="{$recId}">
+                      {BEGIN num_cad_fieldheadercolumn}
+                        <span data-itemtype="grid_field_label" data-itemid="simple_grid_field17" {$item_simple_grid_field17} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="num_cad" data-fieldname="num_cad">
+                          {$label app_t_renum_planilha num_cad}
+                        </span>
+                      {END num_cad_fieldheadercolumn}
+                    </th>
+                  {END cellblock_grid_headcell_field5}
+                  {BEGIN cellblock_grid_headcell_field6}
+                    <TH {$cell_grid_headcell_field6} {$recordattrs} class="r-ori-vert {$cod_log_oficial_class}" data-field="cod_log_oficial" data-cellId="grid_headcell_field6" data-pageid="{$pageid}" data-record-id="{$recId}">
+                      {BEGIN cod_log_oficial_fieldheadercolumn}
+                        <span data-itemtype="grid_field_label" data-itemid="simple_grid_field18" {$item_simple_grid_field18} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="cod_log_oficial" data-fieldname="cod_log_oficial">
+                          {$label app_t_renum_planilha cod_log_oficial}
+                        </span>
+                      {END cod_log_oficial_fieldheadercolumn}
+                    </th>
+                  {END cellblock_grid_headcell_field6}
+                  {BEGIN cellblock_grid_headcell_field7}
+                    <TH {$cell_grid_headcell_field7} {$recordattrs} class="r-ori-vert {$num_atribuido_class}" data-field="num_atribuido" data-cellId="grid_headcell_field7" data-pageid="{$pageid}" data-record-id="{$recId}">
+                      {BEGIN num_atribuido_fieldheadercolumn}
+                        <span data-itemtype="grid_field_label" data-itemid="simple_grid_field22" {$item_simple_grid_field22} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="num_atribuido" data-fieldname="num_atribuido">
+                          {$label app_t_renum_planilha num_atribuido}
+                        </span>
+                      {END num_atribuido_fieldheadercolumn}
+                    </th>
+                  {END cellblock_grid_headcell_field7}
+                  {BEGIN cellblock_grid_headcell_field8}
+                    <TH {$cell_grid_headcell_field8} {$recordattrs} class="r-ori-vert {$compl_atribuido_class}" data-field="compl_atribuido" data-cellId="grid_headcell_field8" data-pageid="{$pageid}" data-record-id="{$recId}">
+                      {BEGIN compl_atribuido_fieldheadercolumn}
+                        <span data-itemtype="grid_field_label" data-itemid="simple_grid_field23" {$item_simple_grid_field23} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="compl_atribuido" data-fieldname="compl_atribuido">
+                          {$label app_t_renum_planilha compl_atribuido}
+                        </span>
+                      {END compl_atribuido_fieldheadercolumn}
+                    </th>
+                  {END cellblock_grid_headcell_field8}
+                  {BEGIN cellblock_grid_headcell_field9}
+                    <TH {$cell_grid_headcell_field9} {$recordattrs} class="r-ori-vert {$status_num_class}" data-field="status_num" data-cellId="grid_headcell_field9" data-pageid="{$pageid}" data-record-id="{$recId}">
+                      {BEGIN status_num_fieldheadercolumn}
+                        <span data-itemtype="grid_field_label" data-itemid="simple_grid_field24" {$item_simple_grid_field24} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="status_num" data-fieldname="status_num">
+                          {$label app_t_renum_planilha status_num}
+                        </span>
+                      {END status_num_fieldheadercolumn}
+                    </th>
+                  {END cellblock_grid_headcell_field9}
+                </tr>
+              {END grid_header}
+            </thead>
+            {BEGIN grid_row}
+              <tbody>
+                <TR {$rowattrs} {$row_grid_1} class="{$rowclass} r-gridrow">
+                  {BEGIN cellblock_grid_cell_field}
+                    <TD {$cell_grid_cell_field} {$recordattrs} class="r-ori-vert {$cod_log_geo_class}" data-field="cod_log_geo" data-cellId="grid_cell_field" data-pageid="{$pageid}" data-record-id="{$recId}">
+                      {BEGIN cod_log_geo_fieldcolumn}
+                        <span data-itemtype="grid_field" data-itemid="simple_grid_field" {$item_simple_grid_field} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="cod_log_geo" data-fieldname="cod_log_geo" data-default-width >
+                          {$cod_log_geo_value}
+                        </span>
+                      {END cod_log_geo_fieldcolumn}
+                    </td>
+                  {END cellblock_grid_cell_field}
+                  {BEGIN cellblock_grid_cell_field1}
+                    <TD {$cell_grid_cell_field1} {$recordattrs} class="r-ori-vert {$inscricao_class}" data-field="inscricao" data-cellId="grid_cell_field1" data-pageid="{$pageid}" data-record-id="{$recId}">
+                      {BEGIN inscricao_fieldcolumn}
+                        <span data-itemtype="grid_field" data-itemid="simple_grid_field4" {$item_simple_grid_field4} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="inscricao" data-fieldname="inscricao" data-default-width >
+                          {$inscricao_value}
+                        </span>
+                      {END inscricao_fieldcolumn}
+                    </td>
+                  {END cellblock_grid_cell_field1}
+                  {BEGIN cellblock_grid_cell_field2}
+                    <TD {$cell_grid_cell_field2} {$recordattrs} class="r-ori-vert {$num_minimo_class}" data-field="num_minimo" data-cellId="grid_cell_field2" data-pageid="{$pageid}" data-record-id="{$recId}">
+                      {BEGIN num_minimo_fieldcolumn}
+                        <span data-itemtype="grid_field" data-itemid="simple_grid_field9" {$item_simple_grid_field9} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="num_minimo" data-fieldname="num_minimo" data-default-width >
+                          {$num_minimo_value}
+                        </span>
+                      {END num_minimo_fieldcolumn}
+                    </td>
+                  {END cellblock_grid_cell_field2}
+                  {BEGIN cellblock_grid_cell_field3}
+                    <TD {$cell_grid_cell_field3} {$recordattrs} class="r-ori-vert {$num_medio_class}" data-field="num_medio" data-cellId="grid_cell_field3" data-pageid="{$pageid}" data-record-id="{$recId}">
+                      {BEGIN num_medio_fieldcolumn}
+                        <span data-itemtype="grid_field" data-itemid="simple_grid_field10" {$item_simple_grid_field10} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="num_medio" data-fieldname="num_medio" data-default-width >
+                          {$num_medio_value}
+                        </span>
+                      {END num_medio_fieldcolumn}
+                    </td>
+                  {END cellblock_grid_cell_field3}
+                  {BEGIN cellblock_grid_cell_field4}
+                    <TD {$cell_grid_cell_field4} {$recordattrs} class="r-ori-vert {$num_maximo_class}" data-field="num_maximo" data-cellId="grid_cell_field4" data-pageid="{$pageid}" data-record-id="{$recId}">
+                      {BEGIN num_maximo_fieldcolumn}
+                        <span data-itemtype="grid_field" data-itemid="simple_grid_field11" {$item_simple_grid_field11} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="num_maximo" data-fieldname="num_maximo" data-default-width >
+                          {$num_maximo_value}
+                        </span>
+                      {END num_maximo_fieldcolumn}
+                    </td>
+                  {END cellblock_grid_cell_field4}
+                  {BEGIN cellblock_grid_cell_field5}
+                    <TD {$cell_grid_cell_field5} {$recordattrs} class="r-ori-vert {$num_cad_class}" data-field="num_cad" data-cellId="grid_cell_field5" data-pageid="{$pageid}" data-record-id="{$recId}">
+                      {BEGIN num_cad_fieldcolumn}
+                        <span data-itemtype="grid_field" data-itemid="simple_grid_field12" {$item_simple_grid_field12} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="num_cad" data-fieldname="num_cad" data-default-width >
+                          {$num_cad_value}
+                        </span>
+                      {END num_cad_fieldcolumn}
+                    </td>
+                  {END cellblock_grid_cell_field5}
+                  {BEGIN cellblock_grid_cell_field6}
+                    <TD {$cell_grid_cell_field6} {$recordattrs} class="r-ori-vert {$cod_log_oficial_class}" data-field="cod_log_oficial" data-cellId="grid_cell_field6" data-pageid="{$pageid}" data-record-id="{$recId}">
+                      {BEGIN cod_log_oficial_fieldcolumn}
+                        <span data-itemtype="grid_field" data-itemid="simple_grid_field15" {$item_simple_grid_field15} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="cod_log_oficial" data-fieldname="cod_log_oficial" data-default-width >
+                          {$cod_log_oficial_value}
+                        </span>
+                      {END cod_log_oficial_fieldcolumn}
+                    </td>
+                  {END cellblock_grid_cell_field6}
+                  {BEGIN cellblock_grid_cell_field7}
+                    <TD {$cell_grid_cell_field7} {$recordattrs} class="r-ori-vert {$num_atribuido_class}" data-field="num_atribuido" data-cellId="grid_cell_field7" data-pageid="{$pageid}" data-record-id="{$recId}">
+                      {BEGIN num_atribuido_fieldcolumn}
+                        <span data-itemtype="grid_field" data-itemid="simple_grid_field19" {$item_simple_grid_field19} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="num_atribuido" data-fieldname="num_atribuido" data-default-width >
+                          {$num_atribuido_value}
+                        </span>
+                      {END num_atribuido_fieldcolumn}
+                    </td>
+                  {END cellblock_grid_cell_field7}
+                  {BEGIN cellblock_grid_cell_field8}
+                    <TD {$cell_grid_cell_field8} {$recordattrs} class="r-ori-vert {$compl_atribuido_class}" data-field="compl_atribuido" data-cellId="grid_cell_field8" data-pageid="{$pageid}" data-record-id="{$recId}">
+                      {BEGIN compl_atribuido_fieldcolumn}
+                        <span data-itemtype="grid_field" data-itemid="simple_grid_field20" {$item_simple_grid_field20} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="compl_atribuido" data-fieldname="compl_atribuido" data-default-width >
+                          {$compl_atribuido_value}
+                        </span>
+                      {END compl_atribuido_fieldcolumn}
+                    </td>
+                  {END cellblock_grid_cell_field8}
+                  {BEGIN cellblock_grid_cell_field9}
+                    <TD {$cell_grid_cell_field9} {$recordattrs} class="r-ori-vert {$status_num_class}" data-field="status_num" data-cellId="grid_cell_field9" data-pageid="{$pageid}" data-record-id="{$recId}">
+                      {BEGIN status_num_fieldcolumn}
+                        <span data-itemtype="grid_field" data-itemid="simple_grid_field21" {$item_simple_grid_field21} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="status_num" data-fieldname="status_num" data-default-width >
+                          {$status_num_value}
+                        </span>
+                      {END status_num_fieldcolumn}
+                    </td>
+                  {END cellblock_grid_cell_field9}
+                </tr>
+              </tbody>
+            {END grid_row}
+            <tfoot>
+              <TR {$rowattrs} {$row_grid_2} class="{$rowclass} {$gridFooter_class} r-gridrow">
+                {BEGIN cellblock_grid_footcell_field}
+                  <TD {$cell_grid_footcell_field} {$recordattrs} class="r-ori-vert {$cod_log_geo_class}" data-field="cod_log_geo" data-cellId="grid_footcell_field" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="t_renum_planilha_print">
+                  </td>
+                {END cellblock_grid_footcell_field}
+                {BEGIN cellblock_grid_footcell_field1}
+                  <TD {$cell_grid_footcell_field1} {$recordattrs} class="r-ori-vert {$inscricao_class}" data-field="inscricao" data-cellId="grid_footcell_field1" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="t_renum_planilha_print">
+                  </td>
+                {END cellblock_grid_footcell_field1}
+                {BEGIN cellblock_grid_footcell_field2}
+                  <TD {$cell_grid_footcell_field2} {$recordattrs} class="r-ori-vert {$num_minimo_class}" data-field="num_minimo" data-cellId="grid_footcell_field2" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="t_renum_planilha_print">
+                  </td>
+                {END cellblock_grid_footcell_field2}
+                {BEGIN cellblock_grid_footcell_field3}
+                  <TD {$cell_grid_footcell_field3} {$recordattrs} class="r-ori-vert {$num_medio_class}" data-field="num_medio" data-cellId="grid_footcell_field3" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="t_renum_planilha_print">
+                  </td>
+                {END cellblock_grid_footcell_field3}
+                {BEGIN cellblock_grid_footcell_field4}
+                  <TD {$cell_grid_footcell_field4} {$recordattrs} class="r-ori-vert {$num_maximo_class}" data-field="num_maximo" data-cellId="grid_footcell_field4" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="t_renum_planilha_print">
+                  </td>
+                {END cellblock_grid_footcell_field4}
+                {BEGIN cellblock_grid_footcell_field5}
+                  <TD {$cell_grid_footcell_field5} {$recordattrs} class="r-ori-vert {$num_cad_class}" data-field="num_cad" data-cellId="grid_footcell_field5" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="t_renum_planilha_print">
+                  </td>
+                {END cellblock_grid_footcell_field5}
+                {BEGIN cellblock_grid_footcell_field6}
+                  <TD {$cell_grid_footcell_field6} {$recordattrs} class="r-ori-vert {$cod_log_oficial_class}" data-field="cod_log_oficial" data-cellId="grid_footcell_field6" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="t_renum_planilha_print">
+                  </td>
+                {END cellblock_grid_footcell_field6}
+                {BEGIN cellblock_grid_footcell_field7}
+                  <TD {$cell_grid_footcell_field7} {$recordattrs} class="r-ori-vert {$num_atribuido_class}" data-field="num_atribuido" data-cellId="grid_footcell_field7" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="t_renum_planilha_print">
+                  </td>
+                {END cellblock_grid_footcell_field7}
+                {BEGIN cellblock_grid_footcell_field8}
+                  <TD {$cell_grid_footcell_field8} {$recordattrs} class="r-ori-vert {$compl_atribuido_class}" data-field="compl_atribuido" data-cellId="grid_footcell_field8" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="t_renum_planilha_print">
+                  </td>
+                {END cellblock_grid_footcell_field8}
+                {BEGIN cellblock_grid_footcell_field9}
+                  <TD {$cell_grid_footcell_field9} {$recordattrs} class="r-ori-vert {$status_num_class}" data-field="status_num" data-cellId="grid_footcell_field9" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="t_renum_planilha_print">
+                  </td>
+                {END cellblock_grid_footcell_field9}
+                {BEGIN cellblock_grid_footcell_field10}
+                  <TD {$cell_grid_footcell_field10} {$recordattrs} class="r-ori-vert {$lado_class}" data-field="lado" data-cellId="grid_footcell_field10" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="t_renum_planilha_print">
+                  </td>
+                {END cellblock_grid_footcell_field10}
+              </tr>
+            </tfoot>
+          </table>
+        {END grid_block}
+        {BEGIN below-grid_block}
+          <DIV class="r-form" data-location="below-grid" id="form_below-grid_{$pageid}" data-makeup="small" {$form_below-grid} data-pageid="{$pageid}">
+            <DIV class="row">
+              <DIV data-cellId="below-grid_c1" data-pageid="{$pageid}" {$cell_below-grid_c1} class="r-ori-vert col-md-12">
+              </div>
+            </div>
+          </div>
+        {END below-grid_block}
+      </div>
+      {$footer}
+    {END body}
+  </body>
+</html>

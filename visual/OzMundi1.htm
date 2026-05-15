@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html {$html_attrs}>
+    <head>
+        <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>OzMundi</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <base href="{$projectPath}" />
+        <link rel="stylesheet" href="styles/default.css?{$wizardBuildKey}" type="text/css" />
+        {BEGIN rtlCSS}
+        <link rel="stylesheet" href="styles/defaultRTL.css?{$wizardBuildKey}" type="text/css" />
+        {END rtlCSS} {BEGIN styleCSSFiles}
+        <link rel="stylesheet" href="{$stylepath}" type="text/css" />
+        {END styleCSSFiles}
+    </head>
+
+    <body class="{$stylename} function-login">
+        {BEGIN body} {$header}
+        <style>
+            {$containerCss}
+            	.r-pretty-login-page > .r-controls {
+            		background: white;
+            	}
+            	.r-pretty-login-page > .r-sideimage {
+            		background: transparent;
+            	}
+        </style>
+
+        <div class="r-pretty-login-page" data-left-image>
+            <div class="r-controls">
+                <div class="r-mainform">
+                    {BEGIN top_block}
+                    <div class="r-form" data-location="top" id="form_top_{$pageid}" data-makeup="pretty-login" {$form_top} data-pageid="{$pageid}">
+                        <div class="row">
+                            <div data-cellId="top_c1" data-pageid="{$pageid}" {$cell_top_c1} class="r-align-center r-ori-vert col-md-12">
+                                <span data-itemtype="login-logo" data-itemid="login-logo" {$item_login-logo} data-pageid="{$pageid}" data-page="_global_OzMundi1" data-small>
+                                    {$logo}
+                                </span>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div data-cellId="top_c3" data-pageid="{$pageid}" {$cell_top_c3} class="r-align-center r-ori-vert col-md-12">
+                                <span data-itemtype="login_welcome" data-itemid="login_welcome" {$item_login_welcome} data-pageid="{$pageid}" data-page="_global_OzMundi1" data-small> Osasco na palma da sua mão</span>
+                            </div>
+                        </div>
+                    </div>
+                    {END top_block} {BEGIN above-grid_block}
+                    <div class="r-form" data-location="above-grid" id="form_above-grid_{$pageid}" data-makeup="pretty-login" {$form_above-grid} data-pageid="{$pageid}">
+                        <div class="row">
+                            <div data-cellId="above-grid_c1" data-pageid="{$pageid}" data-page="_global_OzMundi1" {$cell_above-grid_c1} class="r-align-center r-ori-vert col-md-12">
+                                {BEGIN firstAboveGridCell} {BEGIN message_block}
+                                <div data-itemtype="login_message" data-itemid="login_message" {$item_login_message} data-pageid="{$pageid}" class="alert {$message_class}" role="alert">
+                                    {$message} {BEGIN resend_activation_button}
+                                    <br />
+                                    <button class="btn btn-sm btn-default" {$resend_activation_button_attrs} id="resendActivation{$id}">Reenviar email</button>
+                                    {END resend_activation_button}
+                                </div>
+                                {END message_block} {END firstAboveGridCell}
+                            </div>
+                        </div>
+                    </div>
+                    {END above-grid_block} {BEGIN grid_block}
+                    <table class="r-fluid r-form class-form-login" data-location="grid" id="form_grid_1" data-makeup="pretty-login" data-pageid="1">
+                        <tbody style="display: flex; flex-direction: column; justify-content: center; align-items: center;">
+                            <tr style="">
+                                <td class="r-align-center r-ori-vert" data-cellid="grid_c1" data-pageid="1"></td>
+                                <td class="r-align-center r-ori-vert" colspan="2" data-cellid="grid_c" data-pageid="1" style="width: 240px;">
+                                    <div class="r-edit-field" data-itemtype="username" data-itemid="username" data-pageid="1" data-page="_global_OzMundi1">
+                                        <input type="text" class="form-control" name="username" id="username" onfocusout="populateSelect()" placeholder="Login" />
+                                    </div>
+                                </td>
+                                <td class="r-align-center r-ori-vert" data-cellid="grid_c3" data-pageid="1"></td>
+                            </tr>
+                            <tr>
+                                <td class="r-align-center r-ori-vert" data-cellid="grid_c2" data-pageid="1"></td>
+                                <td class="r-align-center r-ori-vert" colspan="2" data-cellid="grid_c5" data-pageid="1" style="width: 240px;">
+                                    <div class="r-edit-field" data-itemtype="password" data-itemid="password" data-pageid="1" data-page="_global_OzMundi1">
+                                        <input type="password" class="form-control" name="password" id="password" placeholder="Senha" />
+                                    </div>
+                                </td>
+                                <td class="r-align-center r-ori-vert" data-cellid="grid_c7" data-pageid="1"></td>
+                            </tr>
+                            <tr>
+                                <td class="r-ori-vert" data-cellid="grid_c9" data-pageid="1"></td>
+                                <td class="r-align-center r-ori-vert" colspan="2" data-cellid="grid_c10" data-pageid="1" style="width: 240px;">
+                                    <select id="datagrupo" name="datagrupo" class="form-control" placeholder="Perfil">
+                                        <option>PÚBLICO</option>
+                                    </select>
+                                </td>
+                                <td class="r-ori-vert" data-cellid="grid_c12" data-pageid="1"></td>
+                            </tr>
+                            <tr>
+                                <td class="r-align-left r-ori-vert" colspan="1" data-cellid="grid_c8" data-pageid="1" style="padding-left: 10px; padding-right: 10px;">
+                                    {BEGIN signin_button}
+                                    <span data-itemtype="login_button" data-itemid="login_button" {$item_login_button} data-pageid="{$pageid}" data-page="_global_OzMundi1" data-small data-button-item>
+                                        <a style="width: 150px;" type="button" title="" class="btn btn-primary" {$loginlink_attrs}> Entrar </a>
+                                    </span>
+                                    {END signin_button}
+                                </td>
+                                <td class="r-align-center r-ori-vert" colspan="1"  data-cellId="grid_c4" data-pageid="{$pageid}" style="display: none; padding-left: 10px; padding-right: 10px;">
+									<span data-itemtype="custom_button" data-itemid="custom_button1" {$item_custom_button1} data-pageid="{$pageid}" data-small data-button-item >
+										<a type="button" title="" class="btn btn-default" id="visitante" href="javascript:void(0)" typeid="ib" style="background: #949494; width: 100px; border-radius: 25px !important;"> visitante </a>
+									</span>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    {END grid_block} {BEGIN footer_block}
+                    <table class="r-fluid r-form" data-location="footer" id="form_footer_{$pageid}" data-makeup="pretty-login" {$form_footer} data-pageid="{$pageid}">
+                        <tbody>
+                            <tr {$row_footer_0}>
+                                <td class="r-align-center r-ori-vert" data-cellId="footer_c1" data-pageid="{$pageid}" style="text-align: right;">
+
+                                </td>
+                            </tr>
+                            <tr {$row_footer_1}>
+                                <td class="			" data-cellId="footer_c2" data-pageid="{$pageid}" data-page="_global_OzMundi1">
+                                    <span data-itemtype="text" data-itemid="text1" {$item_text1} data-pageid="{$pageid}" data-small> </span>
+
+                                    <span data-itemtype="snippet" data-itemid="snippet" {$item_snippet} data-pageid="{$pageid}" data-page="_global_OzMundi1">
+                                        {$event _global__snippet}
+                                    </span>
+                                </td>
+                            </tr>
+                            <tr {$row_footer_2}>
+                                <td class="r-align-center" data-cellId="footer_c" data-pageid="{$pageid}" data-page="_global_OzMundi1">
+                                    <span data-itemtype="text" data-itemid="text" {$item_text} data-pageid="{$pageid}" data-page="_global_OzMundi1" data-small> Novo no OzMundi? Obtenha acesso</span>
+
+                                    <span data-itemtype="custom_button" data-itemid="custom_button" {$item_custom_button} data-pageid="{$pageid}" data-page="_global_OzMundi1" data-small data-button-item>
+                                        <a type="button" title="" class="btn-link" id="Cadastrar" href="javascript:void(0)" typeid="ib"> aqui </a>
+                                    </span>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    {END footer_block} {BEGIN superbottom_block}
+                    <table class="r-fluid r-form" data-location="superbottom" id="form_superbottom_{$pageid}" data-makeup="pretty-login" {$form_superbottom} data-pageid="{$pageid}">
+                        <tbody></tbody>
+                    </table>
+                    {END superbottom_block}
+                </div>
+            </div>
+            <div class="r-sideimage">
+                <div class="r-image">
+                    <img data-itemtype="page_image" data-itemid="page_image_ash8f23hr" {$item_page_image_ash8f23hr} data-pageid="{$pageid}" data-page="_global_OzMundi1" src="images/globo_osasco_noite.png" />
+                </div>
+            </div>
+        </div>
+        {$footer} {END body}
+    </body>
+</html>
