@@ -10,12 +10,13 @@
 - se o campo inscrição estiver vazio, configura que esta sem quadra
 
 ## V5.3
-- corrigindo apontamento de todas as telas
-- corrigindo apontamento storage todas as telas
-- corrigindo update que procura osasco em matricula
+- corrigida apontamento de todas as telas
+- corrigida apontamento storage todas as telas
+- corrigida update que procura osasco em matricula
 
 ## V5.4
-- corringindo a sequence de arquivos
+- corrigida a responsividade tela de login
+- corrigida a responsividade do painel
 
 # InMap Maua V4 -> V5 Log
 
@@ -43,4 +44,3 @@
 # TODO
 - detectar tabelas existentes no projeto para adicionar num dropdown automaticamente
 - corrigir envio de varios arquivos de uma vez (só coloca contador caso varios arquivos sejam enviados de uma vez)
-- corrigir responsividade das telas 
