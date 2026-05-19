@@ -1,4 +1,22 @@
-    
+# V5 -> V6 Log
+
+## V5.1
+- apontamento de armazenamento de arquivos para o storage no 253 (retrabalhando todo o codigo)
+- função global para sanitizar nome de arquivos
+- user ID do botão visitante na variavel de sessão da tela de login mudada de "28" para "5" para concertar problema de visitante adm
+
+## V5.2
+- apontamento arquivos_outros corrigido
+- se o campo inscrição estiver vazio, configura que esta sem quadra
+
+## V5.3
+- corrigindo apontamento de todas as telas
+- corrigindo apontamento storage todas as telas
+- corrigindo update que procura osasco em matricula
+
+## V5.4
+- corringindo a sequence de arquivos
+
 # InMap Maua V4 -> V5 Log
 
 ## V4.1
@@ -24,4 +42,5 @@
 
 # TODO
 - detectar tabelas existentes no projeto para adicionar num dropdown automaticamente
-- apontamento de armazenamento de arquivos para o storage no 253
+- corrigir envio de varios arquivos de uma vez (só coloca contador caso varios arquivos sejam enviados de uma vez)
+- corrigir responsividade das telas 
